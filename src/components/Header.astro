@@ -1,0 +1,17 @@
+---
+const navItems = ['Contoh', 'Contoh', 'Contoh', 'Contoh', 'Contoh'];
+---
+
+<header class="shadow-md bg-farm-tan">
+  <div class="max-w-[1150px] mx-auto">
+    <div class="mx-4 lg:mx-6">
+      <ul class="flex flex-nowrap justify-center overflow-auto">
+        {navItems.map((item) => (
+          <li>
+            <a href="#" class="inline-block text-sm px-3 lg:px-4 py-5 text-white hover:text-black transition-colors duration-300">{item}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</header>

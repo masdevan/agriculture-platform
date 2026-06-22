@@ -1,0 +1,34 @@
+---
+const facilities = [
+  {
+    title: 'Promotion Media',
+    description: 'On this website you are free to carry out any promotions related to agriculture. However, please note that you also include information. what do you share or promote!',
+  },
+  {
+    title: 'Question and Answer',
+    description: "Don't ever be embarrassed to ask everyone. and it is hoped that experienced farmers will also share information about what is being asked so that it will be useful now and in the future!",
+  },
+  {
+    title: 'Sharing Experiences',
+    description: 'Never be embarrassed to share your experiences. because your experience is the best correction for us farmers who are struggling to fertilize crops to become food!',
+  },
+];
+---
+
+<div class="relative w-full py-12 lg:py-16 overflow-hidden">
+  <div class="max-w-[1150px] mx-auto">
+    <div class="mx-4 lg:mx-6 flex flex-wrap items-center">
+      <div class="w-full lg:w-1/2 order-2 lg:order-1">
+        {facilities.map((item) => (
+          <div class="flex flex-col p-5 rounded shadow-md bg-farm-card hover:bg-farm-card-hover mb-5 lg:mr-[70px] transition-colors duration-300">
+            <h2 class="font-bold text-xl lg:text-2xl text-white mb-1">{item.title}</h2>
+            <strong class="text-[#B6EDAA] font-normal">{item.description}</strong>
+          </div>
+        ))}
+      </div>
+      <div class="w-full lg:w-1/2 order-1 lg:order-2 mb-8 lg:mb-0">
+        <img src="/img/statisticaly.png" alt="Statistics" class="w-full h-auto" />
+      </div>
+    </div>
+  </div>
+</div>

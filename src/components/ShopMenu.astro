@@ -1,0 +1,37 @@
+---
+const products = [
+  {
+    title: 'Fertilizer',
+    description: 'Cheap Quality Fertilizer. get it now and breed your plants thoroughly and keep your plants healthy regularly. Original organic fertilizer from the best selected high quality ingredients!',
+  },
+  {
+    title: 'Seeds',
+    description: 'Get the best planting seeds now and the quality is maintained. get an abundant and guaranteed harvest. only here. feel the difference and enjoy the advantages right now!',
+  },
+  {
+    title: 'Tools',
+    description: 'High quality agricultural tools are sturdy and strong for farming. try it now and enjoy the quality. using selected high quality iron. Rustproof and sturdy. Try this tool now. Don\'t Miss It!',
+  },
+];
+---
+
+<div class="relative w-full py-12 lg:py-16 overflow-hidden bg-farm-section">
+  <div class="max-w-[1150px] mx-auto">
+    <div class="mx-4 lg:mx-6 text-center">
+      <h1 class="font-bold text-3xl lg:text-4xl mb-5">Shop Menu</h1>
+    </div>
+    <div class="mx-4 lg:mx-6 flex flex-col lg:flex-row">
+      {products.map((product) => (
+        <div class="flex-1 p-8 lg:p-10 mx-0 lg:mx-4 my-2 lg:my-0 rounded shadow-md bg-farm-tan hover:bg-farm-tan-hover transition-colors duration-300 text-center">
+          <h3 class="font-bold text-xl lg:text-2xl text-white">{product.title}</h3>
+          <strong class="block my-5 lg:my-6 text-gray-100 font-normal">
+            {product.description}
+          </strong>
+          <button class="appearance-none border-none outline-none px-6 py-1.5 rounded text-[#232323] bg-farm-bg hover:bg-white transition-colors duration-300 cursor-pointer text-sm">
+            Buy Now
+          </button>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
