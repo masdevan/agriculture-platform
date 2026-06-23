@@ -1,17 +1,50 @@
----
-const navItems = ['Contoh', 'Contoh', 'Contoh', 'Contoh', 'Contoh'];
----
+<header class="fixed top-0 left-0 right-0 z-50" id="navbar">
+  <div class="max-w-6xl mx-auto px-3 sm:px-6 py-2 sm:py-4">
+    <nav class="glass rounded-xl sm:rounded-2xl px-3 sm:px-6 flex items-center justify-between h-12 sm:h-16 transition-all duration-500 shadow-lg shadow-black/10">
+      <a href="#" class="flex items-center gap-2 sm:gap-3 shrink-0 group">
+        <img src="/logo.png" alt="AgriPlatform" class="w-6 h-6 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl object-cover transition-transform duration-300 group-hover:scale-105" />
+        <span class="text-farm-greenLight font-bold tracking-tight text-sm sm:text-lg">AgriPlatform</span>
+      </a>
 
-<header class="shadow-md bg-farm-tan">
-  <div class="max-w-[1150px] mx-auto">
-    <div class="mx-4 lg:mx-6">
-      <ul class="flex flex-nowrap justify-center overflow-auto">
-        {navItems.map((item) => (
-          <li>
-            <a href="#" class="inline-block text-sm px-3 lg:px-4 py-5 text-white hover:text-black transition-colors duration-300">{item}</a>
-          </li>
-        ))}
+      <ul class="hidden md:flex items-center gap-1">
+        <li><a href="#" class="text-white/60 hover:text-farm-greenLight px-3 py-2 text-sm transition-all duration-300 rounded-xl hover:bg-white/5">Beranda</a></li>
+        <li><a href="#" class="text-white/60 hover:text-farm-greenLight px-3 py-2 text-sm transition-all duration-300 rounded-xl hover:bg-white/5">Toko</a></li>
+        <li><a href="#" class="text-white/60 hover:text-farm-greenLight px-3 py-2 text-sm transition-all duration-300 rounded-xl hover:bg-white/5">Fasilitas</a></li>
+        <li><a href="#" class="text-white/60 hover:text-farm-greenLight px-3 py-2 text-sm transition-all duration-300 rounded-xl hover:bg-white/5">Tentang</a></li>
+        <li><a href="#" class="text-white/60 hover:text-farm-greenLight px-3 py-2 text-sm transition-all duration-300 rounded-xl hover:bg-white/5">Kontak</a></li>
       </ul>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button class="hidden sm:inline-flex text-sm text-white bg-farm-green hover:bg-farm-leaf px-4 sm:px-5 py-1.5 sm:py-2 rounded-xl font-medium transition-all duration-300 shadow-lg shadow-farm-green/25 btn-primary">
+          Join
+        </button>
+        <button id="menu-toggle" class="md:hidden flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 glass rounded-lg sm:rounded-xl text-white/60 hover:text-white transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden px-3 sm:px-6 hidden">
+    <div class="glass rounded-xl sm:rounded-2xl px-4 py-3 flex flex-col gap-0.5 shadow-xl">
+      <a href="#" class="text-white/60 hover:text-farm-greenLight px-3 py-2.5 text-sm transition-all duration-300 rounded-xl hover:bg-white/5">Beranda</a>
+      <a href="#" class="text-white/60 hover:text-farm-greenLight px-3 py-2.5 text-sm transition-all duration-300 rounded-xl hover:bg-white/5">Toko</a>
+      <a href="#" class="text-white/60 hover:text-farm-greenLight px-3 py-2.5 text-sm transition-all duration-300 rounded-xl hover:bg-white/5">Fasilitas</a>
+      <a href="#" class="text-white/60 hover:text-farm-greenLight px-3 py-2.5 text-sm transition-all duration-300 rounded-xl hover:bg-white/5">Tentang</a>
+      <a href="#" class="text-white/60 hover:text-farm-greenLight px-3 py-2.5 text-sm transition-all duration-300 rounded-xl hover:bg-white/5">Kontak</a>
+      <button class="mt-2 text-sm text-white bg-farm-green hover:bg-farm-leaf px-4 py-2.5 rounded-xl font-medium transition-all duration-300 btn-primary w-full sm:hidden">
+        Join
+      </button>
     </div>
   </div>
 </header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

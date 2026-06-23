@@ -4,16 +4,21 @@ export default {
   theme: {
     extend: {
       colors: {
+        glass: {
+          white: 'rgba(255,255,255,0.06)',
+          border: 'rgba(255,255,255,0.10)',
+          hover: 'rgba(255,255,255,0.14)',
+        },
         farm: {
-          tan: '#ccb78c',
-          'tan-hover': '#c2a56b',
-          green: '#5ec277',
-          'green-dark': '#1f6a0d',
-          bg: '#F1F0EC',
-          section: '#F5F5F5',
-          card: '#59A859',
-          'card-hover': '#387638',
-          plank: '#e2d6be',
+          deep: '#0C2416',
+          forest: '#183D28',
+          leaf: '#2A6B3F',
+          green: '#3DA15E',
+          greenLight: '#6FC389',
+          gold: '#D4A853',
+          goldLight: '#E8C87A',
+          cream: '#F5F1EB',
+          light: '#FAF8F5',
         },
       },
       fontFamily: {
